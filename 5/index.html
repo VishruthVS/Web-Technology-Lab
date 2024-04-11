@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Demo</title>
     <style>
-        body {
-            background-image: url('./img3.jpg');
-            background-repeat: repeat;
-            font-family: Times;
-            background-size: contain;
-        }
-
-        a:link {
-            color: blue;
-        }
-
-        a:visited {
-            color: red;
-        }
-
-        a:hover {
-            color: gray;
-        }
-
-        a:active {
-            color: pink;
-        }
-
-        h2 {
-            visibility: visible;
-        }
-
-        h3 {
-            visibility: hidden;
-        }
-
-        .texty {
-            background-color: aqua;
-        }
+      body {
+        background-color: bisque;
+      }
+      a:link {
+        color: red;
+      }
+      a:visited {
+        color: green;
+      }
+      a:hover {
+        color: blue;
+      }
+      a:active {
+        color: yellow;
+      }
+      .visible {
+        visibility: visible;
+      }
+      .hidden {
+        visibility: hidden;
+      }
+      .visible:hover + .hidden {
+        visibility: visible;
+      }
     </style>
-</head>
-
-<body>
-    Different Fonts
-    <p style="font-family:serif">Hello</p>
-    <p style="font-family:system-ui">Hello</p>
-    <p style="font-family:arial">Hello</p>
-    <p style="font-family:cursive">Hello</p>
-
-    <a href="https://www.google.com" target="_blank">This is the link</a>
-
-    <h2>This is Visible</h2>
-    <h3>This is not Visible</h3>
-
-</body>
-
+  </head>
+  <body>
+    <h1>This is a CSS Demo</h1>
+    <p style="font-family: 'Courier New', monospace">This is Courier New.</p>
+    <p style="font-family: 'Comic Sans MS', cursive">This is Comic Sans MS.</p>
+    <p style="font-family: 'Times New Roman', serif">
+      This is Times New Roman.
+    </p>
+    <div
+      style="
+        background-image: url('https://via.placeholder.com/50');
+        width: 150px;
+        height: 150px;
+        background-repeat: no-repeat;
+      "
+    ></div>
+    <div
+      style="
+        background-image: url('https://via.placeholder.com/50');
+        width: 150px;
+        height: 150px;
+        background-repeat: repeat;
+      "
+    ></div>
+    <br />
+    <br />
+    <div style="display: flex; flex-direction: column">
+      <a href="https://www.google.com">Google</a>
+      <a href="https://www.facebook.com">Facebook</a>
+      <a href="https://www.twitter.com">Twitter</a>
+    </div>
+    <br />
+    <br />
+    <div class="visible">Hover me to see the hidden content</div>
+    <div class="hidden">Hehe I am the hidden content</div>
+  </body>
 </html>
