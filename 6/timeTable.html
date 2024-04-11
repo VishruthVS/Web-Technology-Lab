@@ -1,198 +1,267 @@
-<!-- Program Statement:
-  Design a web page of your institute (week-1) with an attractive 
-  background color, text color, an Image, font etc. (use internal CSS)
--->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JSSSTU</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-      body {
-        background-color: cyan;
-      }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-      nav {
-        display: flex;
-        justify-content: space-around;
-        margin: 10px;
-      }
+        .desc,
+        .header {
+            text-align: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-      nav img {
-        width: 15%;
-        height: 75px;
-      }
+        .center {
+            text-align: center;
+        }
 
-      #nav-links a,
-      #option-links a {
-        display: inline-block;
-        text-decoration: none;
-        margin-top: 2px;
-        color: black;
-        border-radius: 4px;
-        padding: 1rem 2rem;
-        background-color: lightgreen;
-      }
+        .header {
+            background-color: #977ffa;
+            color: white;
+        }
 
-      #option-links {
-        display: flex;
-        justify-content: space-evenly;
-      }
+        th {
+            background-color: hsl(239, 100%, 87%);
+            color: white;
+            border: solid 1px black;
+        }
 
-      #option-links a {
-        background-color: rgb(73, 73, 191);
-        color: white;
-      }
+        td {
+            text-align: center;
+            border: solid 1px hsl(0, 48%, 82%);
+        }
 
-      body {
-        text-align: center;
-      }
+        .footer {
+            background-color: rgb(18, 127, 142);
+            color: white;
+            text-align: center;
+        }
 
-      #col-name,
-      #univ-name {
-        font-size: 3rem;
-      }
+        ul {
+            text-align: center;
+            list-style-position: inside;
+        }
 
-      #col-name {
-        font-family: Arial, Helvetica, sans-serif;
-        color: blue;
-      }
-
-      #univ-name {
-        color: rgb(252, 148, 52);
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-        font-weight: normal;
-      }
-
-      #college {
-        width: 100%;
-        height: 700px;
-        object-fit: cover;
-      }
-
-      h2 {
-        font-size: 2.5rem;
-        color: darkgreen;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
-
-      p {
-        font-size: 1.5rem;
-        color: darkgreen;
-      }
-
-      #sec {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      #sec div {
-        width: 55%;
-      }
-
-      #sec img {
-        width: 40%;
-      }
-
-      footer {
-        margin-top: 15px;
-        display: flex;
-        background-color: rgb(4, 77, 56);
-        color: white;
-        justify-content: space-around;
-      }
-
-      h3 {
-        font-size: 1.75rem;
-        margin: 0;
-      }
-
-      footer a,
-      footer p {
-        display: block;
-        text-decoration: none;
-        color: white;
-        font-size: 1.25rem;
-      }
-
-      footer a {
-        margin: 10px;
-      }
+        .flex {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <img src="logo-1.jpg" alt="SJCE Logo" />
-        <div id="nav-links">
-          <a href="">About</a>
-          <a href="">Academic</a>
-          <a href="">Research</a>
-          <a href="">Programmes</a>
-          <a href="">Placement</a>
-          <a href="">Ranking</a>
-          <a href="">Life at JSSSTU</a>
-          <a href="">Others</a>
+</head>
+
+<body>
+    <header class="flex">
+        <img src="https://raw.githubusercontent.com/MBABHISHEK/jss-stu-Web-Technology-Lab/main/1/jss%20(1).jpg" width="350px" alt="Logo" />
+        <div>
+            <p>JSS MAHAVIDYAPEETHA</p>
+            <a href="https://jssstuniv.in" target="_blank">
+                <p>JSS SCIENCE AND TECHNOLOGY UNIVERSITY</p>
+            </a>
+            <h3>SRI JAYACHAMARAJENDRA COLLEGE OF ENGINEERING MYSORE</h3>
         </div>
-      </nav>
-      <div id="option-links">
-        <a href="">Time Table</a>
-        <a href="">Examination Notification</a>
-        <a href="">Admission Online</a>
-        <a href="">Student / Staff Login</a>
-      </div>
+        <img src="https://raw.githubusercontent.com/MBABHISHEK/jss-stu-Web-Technology-Lab/main/1/sjce.jpg" alt="Logo" />
     </header>
     <main>
-      <section>
-        <h1 id="col-name">Sri Jayachamarajendra College of Engineering</h1>
-        <h1 id="univ-name">A Constituent College of JSSSTU</h1>
-        <img src="college.jpg" alt="SJCE Entrence" id="college" />
-      </section>
-      <section id="sec">
-        <div>
-          <h2>Welcome to our Campus</h2>
-          <p>
-            JSS STU University is built on a strong reputation of SJCE, Mysuru,
-            and passionately committed for providing education in Science,
-            Technology, Engineering & Mathematics (STEM) and Management. It is
-            Steadfast to find solutions to some of the great challenges of our
-            time through scientific research and technological innovations. The
-            institution also has the reputation of academic excellence in
-            professionally oriented programs, and equal proficiency in
-            extra-curricular activities, which makes it a lucrative option for
-            students from all over the country, especially those staying in
-            remote places eyeing at Science and Engineering career.
-          </p>
-        </div>
-        <img src="college-1.jpg" alt="College top view" />
-      </section>
+        <section>
+            <div class="center">
+                <h4>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h4>
+                <p>TIME TABLE FOR THE ACADEMIC YEAR 2023-2024 (EVEN SEMESTER)-U.G.</p>
+            </div>
+            <div class="flex">
+                <p>Semester: VI</p>
+                <p>Section: "C"</p>
+                <p>Room No: IS102</p>
+            </div>
+        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>7:30-8:30</th>
+                    <th>8:30-9:30</th>
+                    <th>9:30-10:30</th>
+                    <th>10:30-11:00</th>
+                    <th>11:00-11:50</th>
+                    <th>11:50-12:40</th>
+                    <th>12:40-1:30</th>
+                    <th>1:30-2:30</th>
+                    <th>2:30-3:30</th>
+                    <th>3:30-4:30</th>
+                    <th>4:30-5:30</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td></td>
+                    <td></td>
+                    <td>OE-2</td>
+                    <td rowspan="6">BREAK</td>
+                    <td>20CS641/<br>20CS642/<br>20CS643
+                    </td>
+                    <td>20CS630</td>
+                    <td>20CS610</td>
+                    <td rowspan="6">BREAK</td>
+                    <td colspan="2">20CS630P C2<br> HW Lab</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td></td>
+                    <td>20HU612</td>
+                    <td>OE-3</td>
+                    <td>20CS630</td>
+                    <td>20CS610</td>
+                    <td>20CS620</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td></td>
+                    <td>20CS641/<br>20CS642/<br>20CS643
+                    </td>
+                    <td>OE-2</td>
+                    <td>20CS620</td>
+                    <td>20CS630</td>
+                    <td>20CS610</td>
+                    <td colspan="3">20CS67L C1<br>SW Lab1/<br>20CS68L C2<br>SW Lab2</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td></td>
+                    <td></td>
+                    <td>OE-3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td></td>
+                    <td>20CS641/<br>20CS642/<br>20CS643
+                    </td>
+                    <td>OE-2</td>
+                    <td>20CS610</td>
+                    <td>20HU612</td>
+                    <td>20CS620</td>
+                    <td colspan="3">20CS67L C2<br>SW Lab1/<br>20CS68L C1<br>SW Lab2</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td></td>
+                    <td></td>
+                    <td>OE-3</td>
+                    <td colspan="3">20Cs630P C1<br> HW Lab</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject title</th>
+                    <th>Credits</th>
+                    <th>Course Instructors</th>
+                </tr>
+                <tr>
+                    <td>20CS610</td>
+                    <td>Machine Learning</td>
+                    <td>4</td>
+                    <td>prof.DHN</td>
+                </tr>
+                <tr>
+                    <td>20CS620</td>
+                    <td>Web Technology</td>
+                    <td>3</td>
+                    <td>prof.NS</td>
+                </tr>
+                <tr>
+                    <td>20CS630</td>
+                    <td>Internet of Things</td>
+                    <td>3</td>
+                    <td>prof.SM</td>
+                </tr>
+                <tr>
+                    <td>20CS641/<br>
+                        20CS642/<br>
+                        20CS643
+                    </td>
+                    <td>Cloud Computing/<br>
+                        Automative Cyber Security/<br>
+                        Cyber Security
+                    </td>
+                    <td>3</td>
+                    <td>prof.MAA/<br>
+                        prof.HDN/<br>
+                        prof.SPM/prof.Rp/prof.RK
+                    </td>
+                </tr>
+                <tr>
+                    <td>20CS662/<br>20CS663
+                    </td>
+                    <td>Introduction to Machine Learning/</br>
+                        Basics of Digital Image Processing(OE-3)
+                    </td>
+                    <td>3</td>
+                    <td>prof.RR/<br>prof.SS</td>
+                </tr>
+                <tr>
+                    <td>20CS67L</td>
+                    <td>Machine Learning Lab</td>
+                    <td>1.5</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>20CS68L</td>
+                    <td>Web Technology Lab</td>
+                    <td>1.5</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>20CS630P</td>
+                    <td>Internet of Things practical</td>
+                    <td>1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>20HU612</td>
+                    <td>Constitution of India and professional ethics</td>
+                    <td>0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>20CS69P</td>
+                    <td>Mini Project</td>
+                    <td>2</td>
+                    <td></td>
+                </tr>
+            </thead>
+        </table>
     </main>
-    <footer>
-      <div>
-        <h3>Quick Links</h3>
-        <a href=""> UGC Reports</a>
-        <a href="">UG Regulations</a>
-        <a href="">PG Regulations</a>
-        <a href="">Ph.D-Regulation</a>
-        <a href="">JSS STU Act</a>
-        <a href="">JSS STU STATUTES</a>
-        <a href="">NIRF</a>
-        <a href="">AICTE Feedback</a>
-        <a href="">COMEDK</a>
-        <a href="">Departments</a>
-        <a href="">Calendar of Events</a>
-      </div>
-      <div>
-        <h3>JSSSTU Contact</h3>
-        <p>JSS TI Campus, Mysuru 570006</p>
-        <p>0821-2548285</p>
-        <p>0821-2548286</p>
-        <p>enquire@jssstuniv.in</p>
-      </div>
-    </footer>
-  </body>
+    <br>
+    <br>
+    <div class="footer">
+        <p>JSS Science and technology university</p>
+        <p>All rights reserved &copy;</p>
+    </div>
+</body>
+
 </html>
