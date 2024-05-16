@@ -9,8 +9,4 @@
     ?>
   </body>
 </html>
-<!-- for just php:
-<!--  <?php
-    echo "Today's date is " . date("d-m-Y");
-    ?> -->
--->
+
