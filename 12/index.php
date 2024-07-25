@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +29,8 @@
 
     foreach ($users as $user) {
         list($storedUsername, $storedPassword) = explode(',', $user);
+       $storedUsername = trim($storedUsername);
+       $storedPassword = trim($storedPassword);
         if ($username === $storedUsername && $password === $storedPassword) {
             $loginSuccessful = true;
             break;
@@ -46,3 +49,5 @@
 
 </body>
 </html>
+
+
